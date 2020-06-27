@@ -1,0 +1,83 @@
+Input
+Store n
+Jump while
+
+while, Load zero
+       Store isPentagonal
+       Jump multiply
+
+multiply,   Load j
+			Store counter
+			Jump jsquare
+jsquare, 	Load isPentagonal
+			Add j
+            Store isPentagonal
+            Load counter
+            Subt one
+            Store counter
+            Skipcond 400
+            Jump jsquare
+            Load isPentagonal
+            /OUTPUT / result of square
+            Store squareResult
+            Jump mycounter
+mycounter, 	Load two
+			Store counter
+            Jump timesthree
+timesthree, Load isPentagonal
+			Add squareResult
+            Store isPentagonal
+            Load counter
+            Subt one
+            Store counter
+            Skipcond 400
+            Jump timesthree
+            Load isPentagonal
+            Subt j
+            Store isPentagonal
+            /OUTPUT / result of multiply
+            jump mycounter2
+mycounter2, load isPentagonal
+			store counter
+            load zero
+            store isPentagonal
+            Jump divide
+divide,     Load counter
+			Subt two
+            Store counter
+            Load isPentagonal
+            Add one
+            Store isPentagonal
+            Load counter
+            Skipcond 800
+            Jump jIncrement
+            Jump divide  
+            
+jIncrement, Load result
+			Add isPentagonal
+            Store result
+			Load j       
+			Add one
+            Store j
+            Load n
+            Subt one
+            Store n
+            Skipcond 400
+            Jump while
+            Jump end
+
+end,    load result
+		output
+        halt
+        
+n, DEC 0
+j, DEC 1
+squareResult, DEC 1
+jRemains, DEC 1
+isPentagonal, DEC 0
+result, DEC 0
+three, DEC 3
+two, DEC 2
+one, dec 1
+zero, dec 0
+counter, DEC 0
